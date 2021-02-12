@@ -1,0 +1,30 @@
+version: '3'
+services:
+  php:
+    image: php:7.2-apache
+    volumes:
+      - ./html:/var/www/html
+    restart: always
+    ports:
+      - '8080:80'
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+      - MYSQL_DATABASE=test
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=test
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=example
+    links:
+      - mysql
+    ports:
+      - 4040:80
