@@ -14,9 +14,34 @@
 </head>
 
 <body>
-    <h1>Test</h1>
-    <p><?php echo $test ?></p>
-    <a href="http://localhost:4040">phpmyadmin</a>
+    <h1>Links</h1>
+    <ul>
+        <li>
+            <a href="http://localhost:4040">phpmyadmin</a>
+        </li>
+    </ul>
+    <h2>Fuel Php</h2>
+    <ul>
+        <li>
+            <a href="http://localhost:8080/sample_framework/public/">welcome</a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/sample_framework/public/index.php/welcome/index">welcome, long paths</a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/sample_framework/public/index.php/home/index">added view</a>
+        </li>
+    </ul>
+    <h2>Fuel PHP Dev memo</h2>
+    <p>開発時によく使うディレクトリ</p>
+    <h3>sample_framework/fuel/app</h3>
+    <ul>
+        <li>sample_framework/fuel/app/classes/controller</li>
+        <li>sample_framework/fuel/app/classes/model</li>
+        <li>sample_framework/fuel/app/views</li>
+        <li>sample_framework/fuel/app/logs</li>
+    </ul>
+    <h3>sample_framework/fuel/public</h3>
 </body>
 
 </html>
