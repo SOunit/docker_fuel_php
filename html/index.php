@@ -14,6 +14,20 @@
 </head>
 
 <body>
+    <h2>Setup</h2>
+    <ol>
+        <li>
+            create docker for php
+        </li>
+        <li>
+            create fuel php folder in html folder
+            curl https://get.fuelphp.com/oil | sh
+            oil create <project name>
+        </li>
+        <li>
+            docker-compose up
+        </li>
+    </ol>
     <h1>Links</h1>
     <ul>
         <li>
